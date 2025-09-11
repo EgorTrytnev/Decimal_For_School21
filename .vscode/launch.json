@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/egortrytnev/School_21/decimal_test/my_decimal/src",
+      "program": "/Users/egortrytnev/School_21/decimal_test/my_decimal/src/build/Debug/outDebug"
+    }
+  ]
+}

@@ -26,3 +26,5 @@ int s21_truncate(s21_decimal value, s21_decimal *result);
 Возвращает результат умножения указанного Decimal на -1.
 */
 int s21_negate(s21_decimal value, s21_decimal *result);
+
+int s21_get_sign(s21_decimal value);

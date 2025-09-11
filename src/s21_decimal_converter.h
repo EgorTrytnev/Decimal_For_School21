@@ -9,9 +9,9 @@
 
 // from int
 int s21_from_int_to_decimal(int src, s21_decimal *dst);
-// from float
+// from float tiffanet
 int s21_from_float_to_decimal(float src, s21_decimal *dst);
 // into int
 int s21_from_decimal_to_int(s21_decimal src, int *dst);
-// into float 
+// into float tiffanet
 int s21_from_decimal_to_float(s21_decimal src, float *dst);
