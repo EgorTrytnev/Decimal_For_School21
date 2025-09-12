@@ -25,17 +25,18 @@ int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result)
 
 
 int s21_multiply_by_10(s21_decimal_advanced* num) {
-  unsigned carry = 0;
+  unsigned res = 0;
   for (int i = 0; i < 8; i++) {
     int part = i / 4, idx = i % 4;
 
     unsigned val = (unsigned)num->decimal[part].bits[idx];
+    //сохраняем в 64 битах вместо 32 чтобы сохранить выход за пределы
     unsigned long long temp =
-        (unsigned long long)val * 10 + (unsigned long long)carry;
+        (unsigned long long)val * 10 + (unsigned long long)res;
     num->decimal[part].bits[idx] = (int)(temp & 0xFFFFFFFF);
-    carry = (unsigned)(temp >> 32);
+    res = (unsigned)(temp >> 32);
   }
-  return carry ? 1 : 0;
+  return res ? 1 : 0;
 }
 
 int s21_multiply_by_pow10(s21_decimal_advanced* num, int power) {
